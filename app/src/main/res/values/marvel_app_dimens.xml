@@ -22,6 +22,7 @@
     <dimen name="marvel_app_design_size_container_height">200dp</dimen>
     <dimen name="marvel_app_design_size_container_width">300dp</dimen>
     <dimen name="marvel_app_design_size_imageview_item">60dp</dimen>
+    <dimen name="marvel_app_design_size_textview_item_margin_start">30dp</dimen>
 
     <dimen name="marvel_app_design_size_text_number">24sp</dimen>
 </resources>
