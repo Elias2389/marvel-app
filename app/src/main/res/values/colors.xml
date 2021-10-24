@@ -10,7 +10,10 @@
     <color name="marvel_app_shimmer">#C2C2C2</color>
     <color name="marvel_app_gray">#D7D7D5</color>
     <color name="marvel_app_windowBackground">#FFFFFF</color>
-    <color name="marvel_app_custom_clear">#455A64</color>
-    <color name="marvel_app_custom_dark">#00796B</color>
-    <color name="marvel_app_custom_accent">#009688</color>
+    <color name="marvel_app_custom_clear">#607D8B</color>
+    <color name="marvel_app_custom_dark">#1976D2</color>
+    <color name="marvel_app_custom_accent">#448AFF</color>
+    <color name="marvel_app_text_title">#FFFFFF</color>
+    <color name="marvel_app_custom_gray">#ECECEC</color>
+
 </resources>

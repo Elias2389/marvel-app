@@ -33,8 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/marvel_app_design_size_textview_item_margin_start"
             android:textAlignment="textStart"
-            android:textAppearance="@style/TextAppearance.AppCompat.Title"
-            android:textColor="@color/marvel_app_black"
+            android:textSize="@dimen/marvel_app_design_size_text_big_4"
             app:layout_constraintBottom_toBottomOf="@+id/character_image"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/character_image"
@@ -46,7 +45,7 @@
         android:id="@+id/marvel_app_view"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/marvel_app_custom_accent"
+        android:background="@color/marvel_app_custom_gray"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

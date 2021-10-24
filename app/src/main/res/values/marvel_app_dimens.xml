@@ -7,6 +7,7 @@
     <dimen name="marvel_app_design_size_medium">8dp</dimen>
     <dimen name="marvel_app_design_size_medium_2">10dp</dimen>
     <dimen name="marvel_app_design_size_medium_3">12dp</dimen>
+    <dimen name="marvel_app_design_size_big">24dp</dimen>
 
     <!-- Generic texts sizes   -->
     <dimen name="marvel_app_design_size_text_small">4sp</dimen>
@@ -16,6 +17,7 @@
     <dimen name="marvel_app_design_size_text_big">12sp</dimen>
     <dimen name="marvel_app_design_size_text_big_2">14sp</dimen>
     <dimen name="marvel_app_design_size_text_big_3">16sp</dimen>
+    <dimen name="marvel_app_design_size_text_big_4">22sp</dimen>
 
     <!--  Custom sizes  -->
     <dimen name="marvel_app_design_size_imageview_detail">100dp</dimen>
