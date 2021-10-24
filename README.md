@@ -84,6 +84,9 @@ La aplicación se encuentra separada por capas con MVVM:
 
 ````
 
+## CI
+Se realizó la configuración de Github Actions para correr los test y generar una APK que puede ser descargada.
+
 ## Testing
 Se realizó el test de los ViewModels y UseCases, para el caso del listado de personajes fue utilizado Junit con la libreria Mockk y para el detalle de los personajes fue utilizado Junit con Mockito.
 * * *
