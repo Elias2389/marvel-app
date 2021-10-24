@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.ae.marvelappication.R
 import com.ae.marvelappication.common.reponse.Resource
@@ -61,24 +62,19 @@ class CharacterDetailFragment : Fragment() {
         binding.itemDetailRv.apply {
             adapter = groupAdapter
             setHasFixedSize(true)
-            layoutManager = LinearLayoutManager(
-                requireContext(),
-                LinearLayoutManager.HORIZONTAL, false
-            )
+            layoutManager = GridLayoutManager(requireContext(), 2)
         }
     }
 
     private fun setupView() {
         characterSelected?.let {
-            binding.characterDetailTitle.text = it.name
+            binding.characterTitleDescription.text =
+                "${it.name} ${resourceProvider.getString(R.string.marvel_app_detail_description).toLowerCase()}:"
             binding.characterDetailDescription.text = if (it.description.isEmpty()) {
                 resourceProvider.getString(R.string.marvel_app_character_not_data)
             } else {
                 it.description
             }
-        } ?: kotlin.run {
-            binding.characterDetailTitle.text =
-                resourceProvider.getString(R.string.marvel_app_character_not_data)
         }
     }
 
@@ -133,14 +129,12 @@ class CharacterDetailFragment : Fragment() {
     private fun setImage(url: String) {
         Glide.with(this)
             .load(url + IMAGE_VARIANT)
-            .placeholder(R.drawable.avatar_generic)
             .centerCrop()
-            .error(R.drawable.avatar_generic)
             .into(binding.characterDetailImage)
     }
 
     private companion object {
         const val CHARACTER_SELECTED: String = "characterSelected"
-        const val IMAGE_VARIANT: String = "/landscape_incredible.jpg"
+        const val IMAGE_VARIANT: String = "/landscape_xlarge.jpg"
     }
 }

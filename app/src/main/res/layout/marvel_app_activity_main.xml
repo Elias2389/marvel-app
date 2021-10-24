@@ -8,6 +8,8 @@
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
+        android:background="@color/marvel_app_custom_accent"
+        app:titleTextColor="@color/marvel_app_text_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
