@@ -1,0 +1,15 @@
+<resources>
+    <string name="marvel_app_app_name">marvelapplication</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="marvel_app_hello_blank_fragment">Hello blank fragment</string>
+    <string name="marvel_app_general_error">An error happen</string>
+    <string name="marvel_app_title_characters_list">Characters List</string>
+    <string name="marvel_app_title_character_detail">Character Detail</string>
+    <string name="marvel_app_message_empty">Not items yet</string>
+    <string name="marvel_app_detail_description">Description</string>
+    <string name="marvel_app_character_not_data">Character has not this data</string>
+    <string name="marvel_app_comics">Comics</string>
+    <string name="marvel_app_series">Series</string>
+    <string name="marvel_app_stories">Stories</string>
+    <string name="marvel_app_event">Events</string>
+</resources>

@@ -1,0 +1,138 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+    id 'kotlin-parcelize'
+}
+
+android {
+    resourcePrefix 'marvel_app'
+    compileSdk 31
+
+    defaultConfig {
+        applicationId "com.ae.marvelapplication"
+        minSdk 21
+        targetSdk 31
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug {
+            buildConfigField "String", "BASE_URL", BASE_URL
+            buildConfigField "String", "API_KEY", API_KEY
+            buildConfigField "String", "PRIVATE_KEY", PRIVATE_KEY
+            testCoverageEnabled true
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    viewBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.6.0'
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.1'
+
+    // Android activity ktx
+    implementation "androidx.activity:activity-ktx:1.3.1"
+    implementation "androidx.fragment:fragment-ktx:1.3.1"
+
+    // ViewModel
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0-beta01"
+
+    // LiveData
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.4.0-beta01"
+
+    // Lifecycles only (without ViewModel or LiveData)
+    implementation "androidx.lifecycle:lifecycle-runtime:2.4.0-beta01"
+
+    // Dagger
+    implementation "com.google.dagger:hilt-android:$daggerVersion"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    kapt "com.google.dagger:hilt-android-compiler:$daggerVersion"
+
+    // retrofit
+    implementation "com.squareup.okhttp3:logging-interceptor:$loggingInterceptorVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "com.squareup.okhttp3:okhttp:$okHttpVersion"
+    implementation "com.google.code.gson:gson:$gsonVersion"
+    implementation "com.squareup.okio:okio:$okioversion"
+
+    //Glide
+    implementation "com.github.bumptech.glide:glide:$glideVersion"
+    kapt "com.github.bumptech.glide:compiler:$glideVersion"
+
+    // Room
+    implementation "androidx.room:room-runtime:$roomVersion"
+    implementation "androidx.room:room-ktx:$roomVersion"
+    kapt "androidx.room:room-compiler:$roomVersion"
+
+    // Timber logging
+    implementation "com.jakewharton.timber:timber:$timberVersion"
+
+    // Groupie
+    implementation "com.github.lisawray.groupie:groupie:$groupie_version"
+    implementation "com.github.lisawray.groupie:groupie-viewbinding:$groupie_version"
+
+    // Navigation Component
+    implementation "androidx.navigation:navigation-fragment-ktx:$navigationComponentVersion"
+    implementation "androidx.navigation:navigation-ui-ktx:$navigationComponentVersion"
+    implementation "androidx.fragment:fragment-ktx:$fragmentKtxVersion"
+
+    // Shimmer
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+
+    // Testing //
+
+    // Junit
+    testImplementation "junit:junit:$junitVersion"
+    androidTestImplementation "androidx.test.ext:junit:$junitTestImplVersion"
+
+    // Mockito
+    testImplementation "org.mockito:mockito-core:$mockitoVersion"
+    testImplementation "androidx.arch.core:core-testing:$archCoreTesting"
+    testImplementation "org.mockito:mockito-inline:$mockitoInlineVersion"
+
+    // Room
+    androidTestImplementation "androidx.room:room-testing:$roomVersion"
+
+    testImplementation "androidx.test.ext:junit:$testExtVersion"
+
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion")
+
+    // Espresso
+    androidTestImplementation "androidx.test.espresso:espresso-core:$expressoCoreVersion"
+
+    // Coroutines
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutinesTestVersion"
+
+    // Mockk
+    testImplementation "io.mockk:mockk:$mockkVersion"
+}
+
+tasks.withType(Test) {
+    testLogging {
+        exceptionFormat "full"
+        events "started", "skipped", "passed", "failed"
+        showStandardStreams true
+    }
+}

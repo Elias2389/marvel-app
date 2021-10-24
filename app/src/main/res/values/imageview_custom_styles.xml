@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="marvel_app_rounded_square">
+        <item name="cornerSize">10%</item>
+    </style>
+    <style name="marvel_app_corner_radius">
+        <item name="cornerSize">50%</item>
+    </style>
+</resources>

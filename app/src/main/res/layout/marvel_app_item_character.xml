@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/marvel_app_design_size_medium"
+    android:layout_marginEnd="@dimen/marvel_app_design_size_medium"
+    android:layout_marginBottom="@dimen/marvel_app_design_size_medium_3">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/item_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/marvel_app_design_size_small_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/marvel_app_white"
+            android:padding="@dimen/marvel_app_design_size_medium_3">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/character_image"
+                android:layout_width="@dimen/marvel_app_design_size_imageview_item"
+                android:layout_height="@dimen/marvel_app_design_size_imageview_item"
+                android:layout_marginStart="@dimen/marvel_app_design_size_medium"
+                android:src="@color/cardview_dark_background"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/marvel_app_rounded_square" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/marvel_app_design_size_medium"
+                android:textAlignment="center"
+                android:textColor="@color/marvel_app_black"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/character_image"
+                app:layout_constraintTop_toTopOf="@+id/character_image"
+                tools:text="test" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/marvel_app_shimmer"
+    tools:context=".ui.characterdetail.view.CharacterDetailFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/marvel_appConstraintlayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/marvel_app_design_size_container_height"
+        android:background="@color/marvel_app_black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/character_detail_image"
+            android:layout_width="@dimen/marvel_app_design_size_imageview_detail"
+            android:layout_height="@dimen/marvel_app_design_size_imageview_detail"
+            android:src="@color/cardview_dark_background"
+            android:background="@drawable/avatar_generic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.3"
+            app:shapeAppearanceOverlay="@style/marvel_app_corner_radius" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/character_detail_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/marvel_app_design_size_medium"
+            android:maxLines="2"
+            android:textSize="@dimen/marvel_app_design_size_text_big_3"
+            app:layout_constraintEnd_toEndOf="@+id/character_detail_image"
+            app:layout_constraintStart_toStartOf="@+id/character_detail_image"
+            app:layout_constraintTop_toBottomOf="@+id/character_detail_image"
+            tools:text="Title" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/marvel_app_cardview_container"
+        android:layout_width="@dimen/marvel_app_design_size_container_width"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-30dp"
+        android:elevation="@dimen/marvel_app_design_size_text_medium"
+        app:cardCornerRadius="@dimen/marvel_app_design_size_medium_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/marvel_appConstraintlayout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/marvel_app_design_size_text_medium">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/character_title_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/marvel_app_design_size_medium"
+                android:maxLines="8"
+                android:text="@string/marvel_app_detail_description"
+                android:textAlignment="center"
+                android:textSize="@dimen/marvel_app_design_size_text_big_2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/character_detail_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/marvel_app_design_size_medium"
+                android:maxLines="8"
+                android:textAlignment="center"
+                android:textSize="@dimen/marvel_app_design_size_text_big_2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/character_title_description"
+                app:layout_constraintVertical_bias="0.04000002"
+                tools:text="text" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/item_detail_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/marvel_app_cardview_container"
+        app:layout_constraintVertical_bias="0.13999999" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/marvel_app_design_size_small_3"
+    android:layout_marginEnd="@dimen/marvel_app_design_size_small_3"
+    android:layout_marginBottom="@dimen/marvel_app_design_size_medium">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/item_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/marvel_app_design_size_small_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/marvel_app_design_size_medium_3">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/item_count"
+                android:layout_width="@dimen/marvel_app_design_size_imageview_item"
+                android:layout_height="@dimen/marvel_app_design_size_imageview_item"
+                android:layout_marginStart="@dimen/marvel_app_design_size_medium"
+                android:src="@color/marvel_app_shimmer"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/marvel_app_rounded_square" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/marvel_app_design_size_medium"
+                android:background="@color/marvel_app_shimmer"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/item_count"
+                app:layout_constraintTop_toTopOf="@+id/item_count" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
