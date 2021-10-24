@@ -3,27 +3,26 @@
 
 # Marvel App Documentation
 
-**Especificación del servicio:** API usada *https://developer.marvel.com/​*
+**Especificación del servicio:** API usada *https://developer.marvel.com/*
 
 **Casos de uso:** 
-* Usuario puede observar listado de los personajes de Marvel.
-* Usuario puede observar el detalle de cada uno de los personajes.
+* El usuario al ingresar en la aplicación deberá visualizar listado de los personajes de Marvel.
+* El usuario deberá visualizar la descripción de cada uno de los personajes.
 
 * * *
 
 # Implementación
-Fue desarrollada una aplicación con que permite al usuario:
-* Listar los personajes de marvel provenientes desde la API, cuenta con paginado mediante offset y limit que se encuentra limitado con un maximo de 60 personajes para efectos practicos y asi evitar cargar cientos de paginas, esto puede ser modificado.
+Se ha desarrollado una aplicaón que permite al usuario realizar las siguientes acciones:
+* Listar los personajes de marvel provenientes desde la API, cuenta con paginado mediante offset y limit que se encuentra limitado con un maximo de 60 personajes para efectos practicos y asi evitar cargar cientos de páginas; esto puede ser modificado.
 * El listado de los personajes cuenta con cache, este permite tener experiencia offline.
-* Presionar un personaje en particular y observar su detalle en una nueva pantalla.
+* Seleccionar un personaje en específico y observar su detalle en una nueva pantalla.
 
 ### Generales
 * Las requests son interceptadas a traves de una clase Interceptor que permite agregar los query params necesarios para poder consumir el servicio de marvel.
 * Las Keys se encuentran en el archivo gradle.properties.
 
-
 ### Tecnologías y herramientas
-Alguna de las tecnologías usadas en el proyecto:
+Algunas de las tecnologías utilizadas en la construcción del proyecto:
 * Kotlin
 * Viewmodel
 * LiveData
@@ -86,7 +85,7 @@ La aplicación se encuentra separada por capas con MVVM:
 ````
 
 ## Testing
-Se realizo el test de los ViewModels y UseCases, para el caso del listado de personajes fue utilizado Junit con la libreria Mockk y para el detalle de los personajes fue utilizado Junit con Mockito.
+Se realizó el test de los ViewModels y UseCases, para el caso del listado de personajes fue utilizado Junit con la libreria Mockk y para el detalle de los personajes fue utilizado Junit con Mockito.
 * * *
 ## Imagenes demostrativas
 
