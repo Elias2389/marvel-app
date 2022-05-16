@@ -12,7 +12,7 @@
 * * *
 
 # Implementación
-Se ha desarrollado una aplicaón que permite al usuario realizar las siguientes acciones:
+Se ha desarrollado una aplición que permite al usuario realizar las siguientes acciones:
 * Listar los personajes de marvel provenientes desde la API, cuenta con paginado mediante offset y limit que se encuentra limitado con un maximo de 60 personajes para efectos practicos y asi evitar cargar cientos de páginas; esto puede ser modificado.
 * El listado de los personajes cuenta con cache, este permite tener experiencia offline.
 * Seleccionar un personaje en específico y observar su detalle en una nueva pantalla.
